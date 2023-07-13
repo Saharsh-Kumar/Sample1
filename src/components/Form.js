@@ -9,7 +9,7 @@ export default function Form() {
     const [formSubmitted, setFormSubmitted] = useState(false);
 
     // Initialize react-hook-form
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
     // Function to handle form submission
     const onSubmit = data => {
