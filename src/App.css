@@ -1,0 +1,101 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Set the font family for all elements to Poppins */
+* > * {
+    font-family: "Poppins", cursive;
+    margin: 0;
+}
+
+/* Set the background color and image for the body element */
+body{
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background-image: url("./assets/img1.jpg");
+}
+
+/* Set the height and alignment of the App element */
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Set the width and border of the register element */
+.register{
+  max-width: 550px;
+  width: 100vw;
+  display:flex;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Set the color of the register span element */
+.register span{
+  color: #adb5bd;
+}
+
+/* Set the width and margin of the form element */
+#form{
+  max-width: 320px;
+  width: 100vw;
+  margin: 2em auto;
+}
+
+/* Set the border and padding of input and button elements inside the form */
+#form > input, .btn{
+  border: 1px solid #e9ecef;
+  padding: .9em 1em;
+}
+
+/* Remove outline from focused input elements inside the form */
+#form > input:focus{
+  outline: none;
+}
+
+/* Set the background color, font size, and cursor for button elements inside the form */
+#form > .btn{
+  background-color: #003049;
+  color: #e9ecef;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Set display to flex for elements with class flex */
+.flex{
+  display: flex;
+  gap: 1em;
+}
+
+/* Set flex direction to column for elements with class flex-col */
+.flex-col{
+  flex-direction: column;
+}
+
+/* Set margin and padding for col-1 element inside register element */
+.register .col-1{
+  margin: auto;
+  padding: 3em 0;
+}
+
+/* Set width, height, border radius, and display for img element inside col-2 element inside register element */
+.register .col-2 img{
+  width: 480px;
+  height: 100%;
+  object-fit: cover;
+  align-self: flex-end;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none; /* Hide image on small screens */
+}
+
+/* Show image on screens wider than or equal to than 860px */
+@media screen and (min-width:860px) {
+    .register .col-2 img {
+        display:block; /* Show image on large screens */
+    }
+}
